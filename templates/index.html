@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>MRI Segmentation DL API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body style="background-color:white;">
+ <div class="login">
+	<h1 style="text-align: center;" > MRI based Heart Image Segmentation using Deep Learning</h1>
+  <p style="text-align:center;"><img src="https://www.spiedigitallibrary.org/ContentImages/Proceedings/10578/1057826/FigureImages/00087_PSISDG10578_1057826_page_2_1.jpg"></p>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form style="text-align: center;" action="{{ url_for('predict')}}"method="post" enctype="multipart/form-data">
+    	<!-- <input style="text-align: center; height:25px ; width:280px;" type="text" name="Rooms" placehol7der="Enter number of Rooms to predict house price" required="required" /> -->
+      <!-- <input type="text" name="test_score" placeholder="Test Score" required="required" /> -->
+    <!--<input type="text" name="interview_score" placeholder="Interview Score" required="required" />-->
+    <h3 style="text-align: center;">
+      Upload an image of MRI heart scan below to show its semantic segmentation
+    </h3>
+    <br>
+        <input style="text-align: center;" type="file" name="file" accept="image/png, image/gif, image/jpeg">
+        <br>
+        <br>
+        <br>
+        <button style="height: 30px;" type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   <br>
+   <br>
+   <br>
+   <!-- <h3 style="text-align: center;">{{ prediction_text }}</h3> -->
+   <div style="text-align: center;">
+		<img src="data:image/png;base64,{{ prediction }}">
+	</div>
+   <br>
+   <br>
+   <h3 style="text-align: center;">
+     Created with &#10084; by Rutwik Patil & Mandar Patil
+   </h3>
+   <br>
+   <p style="text-align: center;">
+    Check out the LinkedIn and Github below
+   </p>
+   <p style="text-align: center;"><a target="_blank" href="https://www.linkedin.com/in/rutwik-patil-0195b910b">
+    <img style="text-align: center; width: 70px; height: 70px;" src="https://brandlogos.net/wp-content/uploads/2016/06/linkedin-logo-512x512.png" style="float:left">
+   </a>
+  </p>
+   <p style="text-align: center;"><a target="_blank" href="https://github.com/rutwik777">
+    <img style="text-align: center; width: 50px; height: 50px;" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">
+   </a>
+  </p>
+ </div>
+
+
+</body>
+</html>

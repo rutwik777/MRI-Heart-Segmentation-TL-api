@@ -4,9 +4,9 @@ itsdangerous==1.1.0
 Jinja2==2.10.1
 MarkupSafe==1.1.1
 Werkzeug==0.15.5
-numpy>=1.9.2
-pandas>=0.19
+numpy==1.9.2
+pandas==0.19
 segmentation-models-pytorch>=0.2.1
-torchvision>=0.8.2+cpu
+torchvision==0.8.2+cpu
 pillow
 https://download.pytorch.org/whl/cpu/torch-1.7.1%2Bcpu-cp39-cp39-linux_x86_64.whl

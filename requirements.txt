@@ -10,6 +10,6 @@ scikit-learn>=0.18
 matplotlib>=1.4.3
 pandas>=0.19
 segmentation-models-pytorch>=0.2.1
-torchvision>=0.11.2+cpu
+torchvision>=0.10.0+cpu
 pillow
 https://download.pytorch.org/whl/cpu/torch-1.9.1%2Bcpu-cp39-cp39-linux_x86_64.whl

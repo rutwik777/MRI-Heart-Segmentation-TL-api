@@ -11,3 +11,5 @@ matplotlib>=1.4.3
 pandas>=0.19
 torch>=1.10.1
 segmentation-models-pytorch>=0.2.1
+torchvision>=0.11.2
+PIL>=8.2.0

@@ -1,11 +1,8 @@
 import flask
 from numpy.lib.type_check import imag
 import torch
-import matplotlib.pyplot as plt
 import numpy as np
 from flask import Flask, request, jsonify, render_template
-#from torch._C import uint8
-#import pickle
 from torchvision import transforms
 from PIL import Image
 import base64
@@ -18,11 +15,6 @@ model.to(device)
 model.eval()
 data = io.BytesIO()
 convert_tensor = transforms.ToTensor()
-
-def show_image_mask(mask, cmap='gray'): # visualisation
-    fig = plt.figure(figsize=(8,8))
-    plt.imshow(mask, cmap=cmap)
-    plt.axis('off')
 
 @app.route('/')
 def home():
